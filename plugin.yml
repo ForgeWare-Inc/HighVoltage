@@ -1,0 +1,41 @@
+name: HighVoltage
+main: com.forgewareinc.highvoltage.HighVoltage
+author: Dmitchell94
+version: 3.0
+commands:
+    voltage:
+        build:
+            description: Toggle build mode.
+        reloadconfig:
+            description: Reload the config from file.
+        saveconfig:
+            description: Save the config to file.
+        debug:
+            description: Toggle debug mode.
+        help:
+            description: Show user commands.
+        adminhelp:
+            description: Show admin commands.
+
+permissions:
+    highvoltage:
+        description: Gives access to all HighVoltage commands.
+        children:
+            highvoltage.cables: true
+            highvoltage.admin: true
+    highvoltage.cables:
+        description: All permissions related to cables.
+        children:
+            highvoltage.cables.info: true
+            highvoltage.cables.builder: true
+            highvoltage.cables.safe: true
+            highvoltage.cables.removeall: true
+    highvoltage.cables.builder:
+        description: Basic permissions for cable building and modifying.
+        children:
+            highvoltage.cables.builder.build: true
+            highvoltage.cables.builder.removeown: true
+    highvoltage.admin:
+        description: Admin permissions; allows to see admin help
+        children:
+            highvoltage.admin.accesconfig: true
