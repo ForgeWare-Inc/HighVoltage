@@ -1,6 +1,7 @@
 name: HighVoltage
 main: com.forgewareinc.highvoltage.HighVoltage
-author: Dmitchell94
+author: ForgeWare
+website: http://forgewareinc.com/bukkit
 version: 3.0
 commands:
     voltage:
